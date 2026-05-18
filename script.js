@@ -1,75 +1,44 @@
-body{
-  margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background: linear-gradient(135deg,#c2ffd8,#465efb);
-  min-height:100vh;
+const recyclingData = {
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
+  서울: `
+    ♻️ 서울 분리수거 안내
 
-.container{
-  width:90%;
-  max-width:700px;
-  text-align:center;
-}
+    • 페트병 라벨 제거
+    • 플라스틱 내용물 비우기
+    • 종이팩은 따로 배출
+  `,
 
-h1{
-  color:white;
-  font-size:48px;
-  margin-bottom:10px;
-}
+  대전: `
+    ♻️ 대전 분리수거 안내
 
-.subtitle{
-  color:white;
-  margin-bottom:30px;
-  font-size:18px;
-}
+    • 비닐은 깨끗이 세척
+    • 캔은 압착 후 배출
+    • 스티로폼 테이프 제거
+  `,
 
-.button-group{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-  margin-bottom:30px;
-}
+  부산: `
+    ♻️ 부산 분리수거 안내
 
-button{
-  padding:14px 24px;
-  border:none;
-  border-radius:15px;
-  background:white;
-  color:#333;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
+    • 유리병 뚜껑 제거
+    • 음식물 제거 후 배출
+    • 페트병 투명 분리
+  `,
 
-  transition:0.3s;
-}
+  대구: `
+    ♻️ 대구 분리수거 안내
 
-button:hover{
-  transform:translateY(-5px);
-  background:#222;
-  color:white;
-}
+    • 플라스틱 라벨 제거
+    • 캔 내부 세척
+    • 종이는 물기 제거
+  `
+};
 
-.card{
-  background:white;
-  padding:30px;
-  border-radius:25px;
+function showInfo(region){
 
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  const result = document.getElementById("result");
 
-  text-align:left;
-}
-
-.card h2{
-  margin-top:0;
-  color:#333;
-}
-
-.card p{
-  line-height:1.8;
-  color:#555;
+  result.innerHTML = `
+    <h2>${region}</h2>
+    <p>${recyclingData[region]}</p>
+  `;
 }
