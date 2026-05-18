@@ -4,34 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>분리수거 도우미</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="container">
 
     <h1>♻️ 분리수거 도우미</h1>
+    <p>지역을 선택하면 분리수거 방법이 나옵니다</p>
 
-    <p class="subtitle">
-      지역별 올바른 분리수거 방법을 확인하세요
-    </p>
+    <div class="buttons">
 
-    <div class="button-group">
       <button onclick="showInfo('서울')">서울</button>
       <button onclick="showInfo('대전')">대전</button>
       <button onclick="showInfo('부산')">부산</button>
       <button onclick="showInfo('대구')">대구</button>
+
     </div>
 
-    <div class="card" id="result">
-
+    <div id="result" class="card">
       <h2>지역을 선택하세요</h2>
-
-      <p>
-        버튼을 누르면 지역별 분리수거 방법이 표시됩니다.
-      </p>
-
     </div>
 
   </div>
